@@ -1,0 +1,18 @@
+== README
+HealthyRecipes is a recipe social networking app. Users from HealthyRecipes will
+be able to join in for free and get to share their recipes with friends and families.
+Social media have been tremendously growing and we've all heard the old saying “you are what you eat.”
+What a better way to cut the junk, start eating healthy with the help of friends through share recipes
+in with HealthyRecipe to share clean and healthy recipes with your love ones.
+
+As a user I would be able to
+
+1.SignUp/SignIn/Signout
+2.create a profile
+3.create a new recipe
+4.upload an image
+5.edit a recipe
+6.destroy a recipe
+7.add new ingredient
+8.comment on friends recipes
+9.Share and Receive recipes
