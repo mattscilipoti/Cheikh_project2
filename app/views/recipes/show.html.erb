@@ -1,8 +1,14 @@
-<h1>
-  <%= @recipe.title %>
+<h4>
+  <%= @recipe.title %> <br
+</h4>
+<p>
  <%= @recipe.description %>
+ </p>
 
-</h1>
+
 <%= link_to "Back", root_path %>
-
+<br>
 <%= link_to "Edit", edit_recipe_path %>
+<br>
+<%= link_to "Delete", recipe_path(@recipe),
+ method: :delete, class: 'delete' %>
