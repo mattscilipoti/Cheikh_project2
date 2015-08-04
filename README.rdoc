@@ -16,4 +16,3 @@ As a user I would be able to
 7.add new ingredient
 8.comment on friends recipes
 9.Share and Receive recipes
-    
