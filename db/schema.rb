@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150804130731) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "title"
+    t.text     "photo_url"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
