@@ -7,10 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
   <nav>
     <ul>
-      <li><%= button_to "Home", root_path %></li>
+      <li><%= button_to "Home", root_path, method: :get %></li>
       <% if user_signed_in? %>
         <li>Welcome <%= current_user.email %></li>
         <li>
@@ -20,7 +21,7 @@
         <li>
           <%= button_to "Login",  new_user_session_path %>
           or
-          <%= button_to "Signup",  new_user_registration_path %>
+          <%= button_to "Signup",  new_user_registration_path, method: :get %>
         </li>
       <% end %>
     </ul>
@@ -28,8 +29,11 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-</header>
-<%= yield %>
+    </div>
+  </header>
+  <div class="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

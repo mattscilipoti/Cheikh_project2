@@ -11,11 +11,16 @@ class RecipesController < ApplicationController
 
   def create
      @recipe = Recipe.new(recipe_params)
+     @recipe.user_id = current_user.id
+     binding.pry
      if @recipe.save
        redirect_to @recipe
      else
        # TODO: add view helpers to display errors
        render :new
+
+
+
      end
   end
 
