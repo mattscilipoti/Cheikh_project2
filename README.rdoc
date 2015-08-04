@@ -7,12 +7,12 @@ in with HealthyRecipe to share clean and healthy recipes with your love ones.
 
 As a user I would be able to
 
-[X] SignUp/SignIn/Signout
 [X] create a new recipe
 [X] list recipes
 [X] edit a recipe
 [X] destroy a recipe
-[] upload an image
+[X] SignUp/SignIn/Signout
+[X] upload an image
 [] add new ingredient
 [] comment on friends recipes
 [] create a profile

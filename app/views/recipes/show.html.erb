@@ -5,11 +5,11 @@
  <%= @recipe.description %>
  </p>
 
- <img class='recipe-photo' src="<%= @recipe.photo_url %>">
+ <img class='recipe-photo' src="<%= @recipe.photo_url %>"><br>
 
 <%= link_to "Back", root_path %>
 <br>
 <%= link_to "Edit", edit_recipe_path %>
 <br>
 <%= link_to "Delete", recipe_path(@recipe),
- method: :delete, data: {confirm: "Are you sure?"}, class: 'delete' %>
+ method: :delete, data: {confirm: "Are you sure you want to delete your recipe?"}, class: 'delete' %>
