@@ -13,6 +13,9 @@ class RecipesController < ApplicationController
      @recipe = Recipe.new(recipe_params)
      if @recipe.save
        redirect_to @recipe
+     else
+       # TODO: add view helpers to display errors
+       render :new
      end
   end
 
@@ -31,7 +34,7 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe.destroy
-    redirect_to root_path
+    redirect_to recipes_path
   end
 
   private
