@@ -2,7 +2,11 @@ class RecipesController < ApplicationController
   before_action :find_recipe, only: [:edit, :show, :update, :destroy]
 
   def index
-    @recipe = Recipe.all.order("created_at DESC")
+    if current_user
+      @recipe = Recipe.where(user_id: current_user.id)
+    else
+      @recipe = Recipe.all.order("created_at DESC")
+    end
   end
 
   def new
@@ -12,14 +16,11 @@ class RecipesController < ApplicationController
   def create
      @recipe = Recipe.new(recipe_params)
      @recipe.user_id = current_user.id
-     binding.pry
      if @recipe.save
        redirect_to @recipe
      else
        # TODO: add view helpers to display errors
        render :new
-
-
 
      end
   end

@@ -7,9 +7,16 @@
 
  <img class='recipe-photo' src="<%= @recipe.photo_url %>"><br>
 
-<%= link_to "Back", root_path %>
-<br>
-<%= link_to "Edit", edit_recipe_path %>
-<br>
-<%= link_to "Delete", recipe_path(@recipe),
- method: :delete, data: {confirm: "Are you sure you want to delete your recipe?"}, class: 'delete' %>
+    <%= link_to "Back", root_path %>
+    <br>
+
+    <% if current_user %>
+
+    <% if current_user.id == @recipe.user_id %>
+
+
+    <%= link_to "Edit", edit_recipe_path %>
+    <%= link_to "Delete", recipe_path(@recipe),method: :delete, data: {confirm: "Are you sure you want to delete your recipe?"}, class: 'delete' %>
+
+    <% end %>
+  <% end %>
