@@ -15,7 +15,6 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = User.create( params[:user] )
      @recipe = Recipe.new(recipe_params)
      @recipe.user_id = current_user.id
      if @recipe.save

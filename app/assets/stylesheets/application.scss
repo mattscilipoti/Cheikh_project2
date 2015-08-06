@@ -20,7 +20,7 @@
 padding: 15px;
 }
 .container{
-  background-color: lime;
+  background-color: #FFA07A;
   padding: inherit;
   width: auto;
   line-height: normal;
@@ -34,4 +34,28 @@ padding: 15px;
 .recipe-photo {
   width: 600px;
   // padding-left: 10px;
+}
+
+#front{
+  background-image: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRyuAfWAIjWQhZEtqrrJs2ku_2dSJULtpNiWd0Yy2fhZrKEBTJNUg);
+  background-size: cover;
+  background-position: 50%;
+  width:auto;
+  padding: 10%;
+  line-height:10%;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+div{
+  display: block;
+}
+#tagline{
+  font-size: 80px;
+
+
+
+
+
 }
