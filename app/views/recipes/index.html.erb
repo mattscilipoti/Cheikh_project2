@@ -3,11 +3,18 @@
   <h1 id="tagline">Eat Healthy. Be Happy</h1>
 </div>
 
+<ul>
 <% @recipe.each do |recipe| %>
 
 <li>
   <%= link_to recipe.title, recipe %>
 </li>
-<% end %><br>
+<% end %>
+</ul>
 
-<%= button_to "New Recipes", new_recipe_path, method: :get %>
+  <% if current_user %>
+
+    <%= button_to "New Recipes", new_recipe_path, method: :get %>
+  <% else %>
+    <%= button_to "Signup",  new_user_registration_path, method: :get %>
+<%  end %>
