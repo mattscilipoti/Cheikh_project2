@@ -5,6 +5,8 @@ gem 'pry'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# This is for simple_form
+gem 'simple_form', '~> 3.1.0'
 # This is for boostrap
 gem 'bootstrap-sass', '~> 3.3.5.1'
 # Use SCSS for stylesheets

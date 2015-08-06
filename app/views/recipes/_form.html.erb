@@ -1,21 +1,7 @@
-<%= form_for @recipe do |f| %>
-<p>
-  <%= f.label :title %><br>
-  <%= f.text_area :title %>
-</p>
 
-<p>
-  <%= f.label :description %><br>
-  <%= f.text_area :description %>
-</p>
-
-<p>
-  <%= f.label :photo_url %><br>
-  <%= f.text_field :photo_url %>
-</p>
-
-<p>
-<%= f.submit %>
-</p>
-
+<%= simple_form_for @recipe do |f| %>
+  <%= f.input :title, label: 'Recipe title please', error: 'Title is mandatory, please specify one' %>
+  <%= f.input :description, placeholder: 'Enter some description' %>
+  <%= f.input :photo_url, placeholder: 'copy and paste a photo url' %>
+  <%= f.button :submit %>
 <% end %>
