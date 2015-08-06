@@ -1,14 +1,12 @@
 <h4>
   <%= @recipe.title %> <br
 </h4>
-<%= button_to "Create a Recipe", new_recipe_path, method: :get %>
-
 <p>
  <%= @recipe.description %>
  </p>
 
  <img class='recipe-photo' src="<%= @recipe.photo_url %>"><br>
-
+<br>
     <%= button_to "Back", root_path, method: :get %>
     <br>
 
