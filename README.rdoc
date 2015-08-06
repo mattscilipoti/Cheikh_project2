@@ -13,7 +13,7 @@ As a user I would be able to
 [X] destroy a recipe
 [X] SignUp/SignIn/Signout
 [X] upload an image
-[] add new ingredient
+[X] add new ingredient
 [] comment on friends recipes
 [] create a profile
 [] Share and Receive recipes

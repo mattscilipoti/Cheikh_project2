@@ -7,33 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-  <nav>
-    <ul>
-      <li><%= button_to "Home", root_path, method: :get %></li>
-      <% if user_signed_in? %>
-        <li>Welcome <%= current_user.email %></li>
-        <li>
-          <%= button_to "Logout", destroy_user_session_path, method: :delete %>
-        </li>
-      <% else %>
-        <li>
-          <%= button_to "Login",  new_user_session_path %>
-          or
-          <%= button_to "Signup",  new_user_registration_path, method: :get %>
-        </li>
-      <% end %>
-    </ul>
-  </nav>
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <h1>Hello healthy</h1>
+            </div>
+            <div class="nav navbar-nav navbar-right">
+                <li>
+                  <%= button_to "Home", root_path, method: :get %>
+                </li>
+                <li>
+              <%= button_to "Signup",  new_user_registration_path, method: :get %>
+                </li>
+
+                <li>
+                  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+                </li>
+
+                <% if user_signed_in? %>
+                <li>
+                  Signed in as <%= current_user.email %>!
+                </li>
+
+                <% else %>
+                <li>
+                  <%= button_to "Login",  new_user_session_path %>
+                </li>
+
+                <% end %>
+            </div>
+          </div>
+        </nav>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
-    </div>
-  </header>
-  <div class="container">
     <%= yield %>
-  </div>
-
 </body>
 </html>
