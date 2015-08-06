@@ -20,13 +20,13 @@
               <%= button_to "Signup",  new_user_registration_path, method: :get %>
                 </li>
 
-                <li>
-                  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
-                </li>
-
                 <% if user_signed_in? %>
                 <li>
                   Signed in as <%= current_user.email %>!
+                </li>
+
+                <li>
+                  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
                 </li>
 
                 <% else %>
