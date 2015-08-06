@@ -49,13 +49,28 @@ padding: 15px;
 }
 
 div{
-  display: block;
+  display:block;
 }
 #tagline{
   font-size: 80px;
+}
 
+img{
+  float: right;
+}
 
+h1{
+  text-align: center;
+}
 
+.button{
+display: inline-block;
+padding: 25px;
+position: absolute; bottom: 0;
 
+}
 
+#info{
+  border-style: solid; color: black;
+  vertical-align: baseline;
 }

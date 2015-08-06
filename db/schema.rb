@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150806030753) do
     t.string   "title"
     t.text     "photo_url"
     t.text     "description"
+    t.text     "instructions"
     t.integer  "user_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false

@@ -1,7 +1,9 @@
 
+
 <%= simple_form_for @recipe do |f| %>
   <%= f.input :title, label: 'Recipe title please', error: 'Title is mandatory, please specify one' %>
   <%= f.input :description, placeholder: 'Enter some description' %>
   <%= f.input :photo_url, placeholder: 'copy and paste a photo url' %>
+  <%= f.input :instructions, placeholder: 'put your instructions here'  %>
   <%= f.button :submit %>
 <% end %>
