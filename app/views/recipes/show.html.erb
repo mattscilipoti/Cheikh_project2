@@ -2,25 +2,23 @@
   <%= @recipe.title %> <br
 </h1>
 <br>
-<h5>
-  Description:
-  <div id="info">
+<h2>
+  Description
+</h2>
+  <br>
     <%= @recipe.description %>
- </div>
- </h5>
 
+ <h2>instructions</h2>
+ <br>
+  <%= @recipe.instructions %>
  <img class='recipe-photo' src="<%= @recipe.photo_url %>"><br>
 <br>
 
  <div class="button">
-
     <%= button_to "Back", root_path, method: :get %>
     <br>
-
     <% if current_user %>
-
     <% if current_user.id == @recipe.user_id %>
-
 
     <%= button_to "Edit", edit_recipe_path, method: :get %>
     <br>

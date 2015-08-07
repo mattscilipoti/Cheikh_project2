@@ -44,8 +44,7 @@ padding: 15px;
   padding: 10%;
   line-height:10%;
   display: flex;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 25%;
 }
 
 div{
@@ -73,4 +72,18 @@ position: absolute; bottom: 0;
 #info{
   border-style: solid; color: black;
   vertical-align: baseline;
+}
+.rt{
+  border-style: solid; color: black;
+  width: 10%;
+  display: flex;
+  padding: 17px;
+}
+
+.photo{
+  width: auto;
+  margin-bottom: 30%;
+  padding: 50px;
+
+
 }
