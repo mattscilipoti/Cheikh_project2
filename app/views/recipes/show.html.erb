@@ -1,29 +1,26 @@
 <h1>
   <%= @recipe.title %> <br
 </h1>
-<br>
+  <br>
 <h2>
   Description
 </h2>
   <br>
-    <%= @recipe.description %>
+  <%= @recipe.description %>
 
- <h2>instructions</h2>
- <br>
+<h2>Instructions</h2>
+  <br>
   <%= @recipe.instructions %>
- <img class='recipe-photo' src="<%= @recipe.photo_url %>"><br>
-<br>
-
- <div class="button">
+  <img class='recipe-photo' src="<%= @recipe.photo_url %>"><br>
+  <br>
+<div class="button">
     <%= button_to "Back", root_path, method: :get %>
-    <br>
+  <br>
     <% if current_user %>
     <% if current_user.id == @recipe.user_id %>
-
     <%= button_to "Edit", edit_recipe_path, method: :get %>
-    <br>
+  <br>
     <%= button_to "Delete", recipe_path(@recipe),method: :delete, data: {confirm: "Are you sure you want to delete your recipe?"}, class: 'delete' %>
-  </div>
-
+</div>
     <% end %>
-  <% end %>
+<% end %>
