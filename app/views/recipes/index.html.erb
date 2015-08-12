@@ -11,6 +11,7 @@
   <ul>
     <% @recipe.each do |recipe| %>
         <div class="photo">
+        <!-- mms: Good job with an image as a link -->
         <%= link_to(image_tag(recipe.photo_url), recipe) %>
         <!-- <%= link_to recipe.title, recipe %> -->
         </div>

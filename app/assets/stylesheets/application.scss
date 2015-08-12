@@ -16,8 +16,11 @@
   @import "bootstrap-sprockets";
   @import "bootstrap";
 
-  .navbar .navbar-nav {
-padding: 15px;
+// mms: some of this should move into recipes.css
+
+// mms: watch your indentation
+.navbar .navbar-nav {
+  padding: 15px;
 }
 .container{
   background-color: #FFA07A;

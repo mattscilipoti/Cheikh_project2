@@ -3,20 +3,20 @@ class RecipesController < ApplicationController
 
   def index
     if current_user
-      @recipe = Recipe.where(user_id: current_user.id)
+      # mms: use the current_user's recipes
+      @recipe = current_user.recipes
     else
       @recipe = Recipe.all.order("created_at DESC")
     end
   end
 
   def new
-    @recipe = Recipe.new
-    @recipe.user_id = current_user.id
+    @recipe = current_user.recipes.build
   end
 
   def create
-     @recipe = Recipe.new(recipe_params)
-     @recipe.user_id = current_user.id
+    # mms: use the current_user's recipes
+    @recipe = current_user.recipes.build(recipe_params)
      if @recipe.save
        redirect_to @recipe, notice: "Successfully created new recipe"
      else
@@ -31,16 +31,18 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = current_user.recipes.find(params[:id])
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
+    @recipe = current_user.recipes.find(params[:id])
     @recipe.update(recipe_params)
     redirect_to @recipe
   end
 
-  def destroy
+  # mms: action is delete
+  def delete
+    @recipe = current_user.recipes.find(params[:id])
     @recipe.destroy
     redirect_to recipes_path
   end
